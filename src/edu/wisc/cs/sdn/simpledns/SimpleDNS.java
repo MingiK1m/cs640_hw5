@@ -7,9 +7,8 @@ public class SimpleDNS
 	public static void main(String[] args)
 	{		
 		if(args.length == 4 && args[0].contentEquals("-r") && args[2].contentEquals("-e")){
-			LocalDNSServer dnsServer = new LocalDNSServer(args[1], args[3]);
-			
 			try{
+				LocalDNSServer dnsServer = new LocalDNSServer(args[1], args[3]);
 				dnsServer.runDNSServer();
 			} catch(Exception e){
 				e.printStackTrace();
